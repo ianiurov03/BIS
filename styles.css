@@ -1,0 +1,15 @@
+body {
+	font-family: Arial;
+	background-color: #eeeeee;
+}
+
+h1 {
+	font-family: Arial;
+	color: #111111;
+}
+
+.input {
+	background-color: #cccccc;
+	padding: 10px;
+}
+
