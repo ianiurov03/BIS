@@ -20,7 +20,7 @@ jobs:
     - name: Scan Docker image with Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: jobs:docker.io/library/my-image-name:1780576308:tag
+        image-ref: jobs:docker.io/library/my-image-name:$(date +%s):tag
         format: 'table'
         severity: 'CRITICAL,HIGH'
         vuln-type: 'os,library'
