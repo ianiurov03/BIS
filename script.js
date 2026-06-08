@@ -1,11 +1,23 @@
+function validate(number) {
+    const pattern = /[0-9]/;
+    if (!pattern.test(number)) {
+        alert("В полях ввода должны быть числа.");
+        throw new Error("В полях ввода должны быть числа.");
+    }
+}
+
 function calculate() {
 	let firstInput = document.getElementById("first");
 	let secondInput = document.getElementById("second");
 	let signInput = document.getElementById("sel");
 	let outputDiv = document.getElementById("output");
+    'use strict';
 	let first = parseFloat(firstInput.value);
+    'use strict';
 	let second = parseFloat(secondInput.value);
 	let sign = signInput.value;
+	validate(first);
+	validate(second);
 	
 	if (isNaN(first)) {
 		outputDiv.innerHTML = "Не введено первое число";
